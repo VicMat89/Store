@@ -2,9 +2,6 @@ import { Button } from "@mui/material";
 import "../assets/App.css"
 import { useState, useEffect } from 'react';
 
-
-
-
 const GridProducts = (props) => {
 
     const [productos, setProductos] = useState([]);

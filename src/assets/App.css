@@ -39,3 +39,24 @@
   margin: 30px;
   gap: 10px;
 }
+
+.App {
+  text-align: center;
+}
+
+
+.Carousel {
+  padding-left: 41%;
+  padding-top: 10%;
+}
+
+.one {
+  width: 200px !important;
+  height: 250px !important;
+
+
+
+}
+
+
+
