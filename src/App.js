@@ -3,6 +3,7 @@ import axios from "axios";
 import GridProducts from "./components/GridProducts";
 import './assets/App.css';
 import DemoCarousel from "./components/Carousel";
+import {MenuNav} from './components/MenuNav';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       const getData = async () => {
           const info = await axios.get("https://fakestoreapi.com/products");
           setProducts(info.data);
+          console.log(info)
 
       };
       getData();
@@ -21,6 +23,7 @@ function App() {
   return (
     <> 
     <DemoCarousel info={products} />
+      <MenuNav productos = {products}/>
       <GridProducts products={products} />
 
     </>
