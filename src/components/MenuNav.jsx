@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import '../assets/navstyles.css'
 import { useNavigate } from 'react-router-dom'
 
+
 export function MenuNav(props) {
     const navigate = useNavigate();
     const navigate2 = useNavigate();

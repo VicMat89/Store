@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import DemoCarousel from "./Carousel";
 
 const GridProduct = (props) => {
-
+    
     const [productos, setProductos] = useState([]);
     const [filter, setFilter] = useState([])
 

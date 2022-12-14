@@ -30,6 +30,7 @@ const Products = (props) => {
             <Button variant="outlined" className="button" onClick={() => filterProducts("jewelery")}>Jewelery</Button>
         </div>
 
+
         <div className="containerProducts">
             {filter.map((prod) => (
                 <div className="products"

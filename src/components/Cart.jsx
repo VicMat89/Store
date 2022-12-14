@@ -2,6 +2,7 @@ import { useAppContext } from "../context/contextCart";
 
 
 const Cart = () => {
+    
     const context = useAppContext();
 
     return <>
