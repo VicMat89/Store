@@ -6,9 +6,7 @@ import { Button } from "@mui/material";
 import { useAppContext } from "../context/contextCart";
 import { useNavigate } from "react-router-dom";
 
-
 const OneProduct = () => {
-
     const navigate = useNavigate();
     const context = useAppContext();
     const { id } = useParams();

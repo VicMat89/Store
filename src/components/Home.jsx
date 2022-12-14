@@ -30,6 +30,7 @@ const Home = (props) => {
             <Button variant="contained" className="button" onClick={() => filterProducts("jewelery")}>Jewelery</Button>
         </div>
 
+
         <div className="containerProducts">
             {filter.map((prod) => (
                 <div className="products"
