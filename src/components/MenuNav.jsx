@@ -13,7 +13,6 @@ export function MenuNav(props) {
             <div className="no-carr" onClick={() => navigate2("/products")}>Products</div>
             <div className="bestRated">Best Rated</div>
             <input className='search' placeholder='Search...' type='text' />
-
             <div className="user">User</div>
         </div>
 
