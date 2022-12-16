@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 import Home from "./components/Home";
 import "./assets/App.css";
 import { MenuNav } from "./components/MenuNav";
@@ -9,8 +10,10 @@ import { AppWrapper } from "./context/contextCart";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Cart from "./components/Cart";
 
+
 function App() {
   const [products, setProducts] = useState([]);
+
 
   useEffect(() => {
     const getData = async () => {
@@ -38,7 +41,21 @@ function App() {
           </Routes>
         </Router>
       </AppWrapper>
+
     </>
   );
 }
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+

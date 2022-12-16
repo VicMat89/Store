@@ -1,10 +1,12 @@
 import { Button } from "@mui/material";
 import "../assets/App.css"
 import { useState, useEffect } from 'react';
+
 import DemoCarousel from "./Carousel";
 
 const GridProduct = (props) => {
     
+
     const [productos, setProductos] = useState([]);
     const [filter, setFilter] = useState([])
 
@@ -18,8 +20,10 @@ const GridProduct = (props) => {
         setFilter(getCategories)
     }
     return <>
+
         <DemoCarousel productos={productos} />
         
+
         <div className="container-button">
             <Button variant="outlined" className="button" onClick={() => setFilter(productos)}>ALL</Button>
             <Button variant="outlined" className="button" onClick={() => filterProducts("men's clothing")}>Men's clothing</Button>
@@ -45,3 +49,4 @@ const GridProduct = (props) => {
 }
 
 export default GridProduct;
+

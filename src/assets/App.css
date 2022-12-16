@@ -11,6 +11,7 @@
   padding: 10px;
   border-color: #E4E9F3;
 
+
 }
 
 .containerProducts {
@@ -96,4 +97,8 @@
 .contButton {
   display: flex;
   gap: 15px;
+
 }
+
+
+
