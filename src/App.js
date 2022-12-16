@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import GridProducts from "./components/GridProducts";
-import './assets/App.css';
-import DemoCarousel from "./components/Carousel";
-import {MenuNav} from './components/MenuNav';
+
+import Home from "./components/Home";
+import "./assets/App.css";
+import { MenuNav } from "./components/MenuNav";
+import OneProduct from "./components/OneProduct";
+import Products from "./components/Products";
+import { AppWrapper } from "./context/contextCart";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Cart from "./components/Cart";
 
 
 function App() {
@@ -11,20 +16,31 @@ function App() {
 
 
   useEffect(() => {
-      const getData = async () => {
-          const info = await axios.get("https://fakestoreapi.com/products");
-          setProducts(info.data);
-          console.log(info)
-
-      };
-      getData();
+    const getData = async () => {
+      const info = await axios.get("https://fakestoreapi.com/products");
+      setProducts(info.data);
+    };
+    getData();
   }, []);
 
+  
   return (
-    <> 
-    <DemoCarousel info={products} />
-      <MenuNav productos = {products}/>
-      <GridProducts products={products} />
+    <>
+      <AppWrapper>
+        <Router>
+          <MenuNav productos={products} />
+          <Link to="/carrito">CARRITO</Link>
+          <Routes>
+            <Route path="/" element={<Home products={products} />} />
+            <Route path="/carrito" element={<Cart products={products} />} />
+            <Route
+              path="/products"
+              element={<Products products={products} />}
+            />
+            <Route path="/Products/product/:id" element={<OneProduct />} />
+          </Routes>
+        </Router>
+      </AppWrapper>
 
     </>
   );

@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
-import "../assets/App.css"
+import "../assets/App.css";
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
-import DemoCarousel from "./Carousel";
 
-const GridProduct = (props) => {
-    
+const Products = (props) => {
+
+    const navigate = useNavigate()
 
     const [productos, setProductos] = useState([]);
     const [filter, setFilter] = useState([])
@@ -21,9 +22,6 @@ const GridProduct = (props) => {
     }
     return <>
 
-        <DemoCarousel productos={productos} />
-        
-
         <div className="container-button">
             <Button variant="outlined" className="button" onClick={() => setFilter(productos)}>ALL</Button>
             <Button variant="outlined" className="button" onClick={() => filterProducts("men's clothing")}>Men's clothing</Button>
@@ -31,22 +29,25 @@ const GridProduct = (props) => {
             <Button variant="outlined" className="button" onClick={() => filterProducts("electronics")}>Electronics</Button>
             <Button variant="outlined" className="button" onClick={() => filterProducts("jewelery")}>Jewelery</Button>
         </div>
+
+
         <div className="containerProducts">
             {filter.map((prod) => (
                 <div className="products"
                     key={prod.id}>
                     <img src={prod.image} height="200px" width={200} alt="auto" />
                     <h3 className="title">{prod.title}</h3>
-                    <p>{prod.price}€</p>
-                    <Button variant="outlined" className="button">Buy</Button>
+                    <p className="p">{prod.price}€</p>
+                    <Button variant="outlined" className="button" onClick={() => navigate(`/Products/product/${prod.id}`)}>Buy</Button>
 
                 </div>
+
             ))
             }
         </div>
+
     </>
 
 }
 
-export default GridProduct;
-
+export default Products;
