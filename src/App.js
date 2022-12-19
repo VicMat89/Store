@@ -17,7 +17,6 @@ import Users from "./components/Users";
 function App() {
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
     const getData = async () => {
       const info = await axios.get("https://fakestoreapi.com/products");
@@ -53,16 +52,3 @@ function App() {
   );
 }
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-

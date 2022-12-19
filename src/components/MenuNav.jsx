@@ -28,6 +28,7 @@ export function MenuNav(props) {
             <div className="logo"><img className="img-nav" src='https://img.freepik.com/vector-gratis/carro-tienda-edificio-tienda-dibujos-animados_138676-2085.jpg?w=2000' alt='logo' onClick={() => navigate("/")} /></div>
             <Button variant="text" className="button-nav" onClick={() => navigate2("/products")}>Products</Button>
             <input className='search' placeholder='Search...' type='text' />
+
         </div>
         <div className='container-nav2'>
             {veriLogin ? (
