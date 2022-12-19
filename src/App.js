@@ -6,8 +6,11 @@ import { MenuNav } from "./components/MenuNav";
 import OneProduct from "./components/OneProduct";
 import Products from "./components/Products";
 import { AppWrapper } from "./context/contextCart";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { AppWrapperTotal } from "./context/contextTotal";
+import { AppUsers } from "./context/contextUsers";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
+import Users from "./components/Users";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -24,19 +27,23 @@ function App() {
   return (
     <>
       <AppWrapper>
+      <AppWrapperTotal>
+      <AppUsers>
         <Router>
           <MenuNav productos={products} />
-          <Link to="/carrito">CARRITO</Link>
           <Routes>
             <Route path="/" element={<Home products={products} />} />
-            <Route path="/carrito" element={<Cart products={products} />} />
+            <Route path="/Carrito" element={<Cart products={products} />} />
             <Route
               path="/products"
               element={<Products products={products} />}
             />
             <Route path="/Products/product/:id" element={<OneProduct />} />
+            <Route path="/Users" element={<Users />} />
           </Routes>
         </Router>
+        </AppUsers>
+        </AppWrapperTotal>
       </AppWrapper>
     </>
   );
