@@ -21,7 +21,8 @@ const Products = (props) => {
         setFilter(getCategories)
     }
     return <>
-
+        <h1 className="container-button">COLLECTION</h1>
+        <hr/>
         <div className="container-button">
             <Button variant="outlined" className="button" onClick={() => setFilter(productos)}>ALL</Button>
             <Button variant="outlined" className="button" onClick={() => filterProducts("men's clothing")}>Men's clothing</Button>
@@ -38,7 +39,7 @@ const Products = (props) => {
                     <img src={prod.image} height="200px" width={200} alt="auto" />
                     <h3 className="title">{prod.title}</h3>
                     <p className="p">{prod.price}€</p>
-                    <Button variant="outlined" className="button" onClick={() => navigate(`/Products/product/${prod.id}`)}>Buy</Button>
+                    <Button variant="outlined" className="button1" onClick={() => navigate(`/Products/product/${prod.id}`)}>Buy</Button>
 
                 </div>
 

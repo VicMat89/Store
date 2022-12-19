@@ -27,12 +27,12 @@
   text-align: justify;
 }
 
-.p{
+.p {
   font-weight: bolder;
-  font-size:large
+  font-size: 1.3rem;
 }
 
-.title1{
+.title1 {
   color: #828787;
 }
 
@@ -40,8 +40,13 @@
 
   color: black !important;
   border-color: black !important;
-  background-color: azure!important;
+  background-color: azure !important;
 
+}
+
+.button1{
+  color: white!important;
+  background-color: #162378!important;
 }
 
 .container-button {
@@ -61,6 +66,7 @@
   padding-left: 41%;
   padding-top: 10%;
 }
+
 
 .one {
   width: 200px !important;
@@ -97,8 +103,80 @@
 .contButton {
   display: flex;
   gap: 15px;
-
 }
 
+.container-cart1 {
+  display: flex;
+  flex-direction: row;
+}
 
+.totalCart {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  gap: 40px;
+}
 
+.text-cart {
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  justify-content: space-around;
+  align-items: center;
+  font-style: italic;
+  font-size: large;
+}
+
+.text-top-home {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  color: #E4E9F3;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.container-user {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  flex-direction: column;
+}
+
+.container-user-login {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.container-user1 {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.button-Login {
+  color: white !important;
+  border-color: black !important;
+  background-color: black !important;
+  margin-top: 10px !important;
+}
+
+.container-logOut {
+  display: flex;
+  gap: 5px;
+}
+
+.rated{
+  display: flex;
+}
