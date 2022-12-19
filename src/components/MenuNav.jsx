@@ -1,4 +1,5 @@
 import '../assets/navstyles.css'
+
 import { useNavigate } from 'react-router-dom'
 import * as React from 'react';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';

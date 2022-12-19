@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 import Home from "./components/Home";
 import "./assets/App.css";
 import { MenuNav } from "./components/MenuNav";
@@ -12,8 +13,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import Users from "./components/Users";
 
+
 function App() {
   const [products, setProducts] = useState([]);
+
 
   useEffect(() => {
     const getData = async () => {
@@ -45,7 +48,21 @@ function App() {
         </AppUsers>
         </AppWrapperTotal>
       </AppWrapper>
+
     </>
   );
 }
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
