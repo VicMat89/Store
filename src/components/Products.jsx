@@ -24,11 +24,11 @@ const Products = (props) => {
         <h1 className="container-button">COLLECTION</h1>
         <hr/>
         <div className="container-button">
-            <Button variant="outlined" className="button" onClick={() => setFilter(productos)}>ALL</Button>
-            <Button variant="outlined" className="button" onClick={() => filterProducts("men's clothing")}>Men's clothing</Button>
-            <Button variant="outlined" className="button" onClick={() => filterProducts("women's clothing")}>Women`s clothing</Button>
-            <Button variant="outlined" className="button" onClick={() => filterProducts("electronics")}>Electronics</Button>
-            <Button variant="outlined" className="button" onClick={() => filterProducts("jewelery")}>Jewelery</Button>
+            <Button variant="contained" className="button" onClick={() => setFilter(productos)}>ALL</Button>
+            <Button variant="contained" className="button" onClick={() => filterProducts("men's clothing")}>Men's clothing</Button>
+            <Button variant="contained" className="button" onClick={() => filterProducts("women's clothing")}>Women`s clothing</Button>
+            <Button variant="contained" className="button" onClick={() => filterProducts("electronics")}>Electronics</Button>
+            <Button variant="contained" className="button" onClick={() => filterProducts("jewelery")}>Jewelery</Button>
         </div>
 
 
@@ -39,7 +39,7 @@ const Products = (props) => {
                     <img src={prod.image} height="200px" width={200} alt="auto" />
                     <h3 className="title">{prod.title}</h3>
                     <p className="p">{prod.price}€</p>
-                    <Button variant="outlined" className="button1" onClick={() => navigate(`/Products/product/${prod.id}`)}>Buy</Button>
+                    <Button variant="contained" className="button1" onClick={() => navigate(`/Products/product/${prod.id}`)}>Buy</Button>
 
                 </div>
 

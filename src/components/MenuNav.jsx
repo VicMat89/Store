@@ -15,6 +15,7 @@ export function MenuNav(props) {
     const navigate2 = useNavigate();
     const navigate3 = useNavigate();
     const navigate4 = useNavigate();
+    const navigate5 = useNavigate();
 
     let veriLogin = contextUser.sharedUsers.find((x) => x.isLogin === true)
     const logout = () => {
@@ -33,8 +34,8 @@ export function MenuNav(props) {
         <div className='container-nav2'>
             {veriLogin ? (
                 <div className='container-logOut'>
-                    <p>Welcome {veriLogin.name.firstname}</p>
-                    <Button variant="text" className="button-nav" onClick={() => logout()}>Log Out</Button>
+                    <Button  variant="text" className="button-nav" onClick={() => navigate5(`/Profile/${veriLogin.name.firstname}`)}>Welcome {veriLogin.name.firstname}</Button>
+                    {/*<Button variant="text" className="button-nav" onClick={() => logout()}>Log Out</Button>*/}
                 </div>)
                 : (<Button variant="text" className="button-nav" onClick={() => navigate4("/Users")}>Log In</Button>
                 )}

@@ -51,11 +51,15 @@ const Cart = () => {
         addToTotal()
     }
     return (<>
-        {context.sharedState.length < 1 ? (<div className="cart-empty"><h1>Your cart is empty</h1></div>) :
+        {context.sharedState.length < 1 ? (
+            <div className="cart-empty">
+                <h1>Your cart is empty</h1><br/>
+                <img src="https://img.icons8.com/sf-ultralight-filled/100/null/sad-cloud.png"  />
+            </div>) :
             (<div>
                 <h1 className="text-cart">CART</h1>
                 {context.sharedState.map((prod) =>
-                    <div className="container0" key={prod.id}>
+                    <div className="container0-1" key={prod.id}>
                         <div className="container-cart1">
                             <img src={prod.image} width="250" height="250" />
                             <div className="textOne">

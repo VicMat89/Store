@@ -1,3 +1,7 @@
+* {
+  font-family: cursive !important;
+}
+
 .products {
   display: flex;
   justify-content: center;
@@ -10,8 +14,7 @@
   margin: 5px;
   padding: 10px;
   border-color: #E4E9F3;
-
-
+  background-color: azure;
 }
 
 .containerProducts {
@@ -44,10 +47,11 @@
 
 }
 
-.button1{
-  color: white!important;
-  background-color: #162378!important;
+.button1 {
+  color: white !important;
+  background-color: #162378 !important;
 }
+
 
 .container-button {
   display: flex;
@@ -76,19 +80,38 @@
 .container0 {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 400px;
-  margin-top: 100px;
+  width: 100%;
+  margin-top: 50px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.container0-1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+  flex-direction: column;
+  align-content: center;
+  height: 400px;
+  background-color: azure;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 .container1 {
   display: flex;
+  justify-content: center;
+  width: 600px;
   flex-direction: row;
+  justify-content: center;
 }
 
 .container2 {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 540px;
   text-align: justify;
 }
 
@@ -125,9 +148,9 @@
 
 .cart-empty {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 500px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-style: italic;
   font-size: large;
@@ -155,6 +178,7 @@
   display: flex;
   flex-direction: column;
   width: 400px;
+  font-family: cursive;
 }
 
 .container-user1 {
@@ -177,6 +201,36 @@
   gap: 5px;
 }
 
-.rated{
+.rated {
   display: flex;
+}
+
+.containter-prof {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.container-prof-1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  border: 3px solid #def1ed;
+  border-radius: 10px;
+  background-color: azure;
+}
+
+.container-prof-text {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
 }

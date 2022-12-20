@@ -26,7 +26,7 @@ const Users = () => {
     return (<>
         <div className="container-user">
             <div className="container-user-login">
-                <h1>Log In</h1>
+                <h1>Great to see you again !</h1>
                 <h4>Email</h4>
                 <input type="text" placeholder="Enter your email" onChange={(e) => setUser(e.target.value)} required />
                 <h4>Password</h4>

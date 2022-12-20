@@ -17,13 +17,6 @@ const Home = (props) => {
     return <>
         <h1 className="text-top-home">WELCOME TO OUR STORE</h1>
         <DemoCarousel info={productos} />
-        {/*<div className="container-button">
-            <Button variant="contained" className="button" onClick={() => setFilter(productos)}>ALL</Button>
-            <Button variant="contained" className="button" onClick={() => filterProducts("men's clothing")}>Men's clothing</Button>
-            <Button variant="contained" className="button" onClick={() => filterProducts("women's clothing")}>Women`s clothing</Button>
-            <Button variant="contained" className="button" onClick={() => filterProducts("electronics")}>Electronics</Button>
-            <Button variant="contained" className="button" onClick={() => filterProducts("jewelery")}>Jewelery</Button>
-        </div>*/}
         <hr />
         <h1 className="containerProducts"> TOP RATE <img src="https://img.icons8.com/ios-filled/50/null/prize.png" /></h1>
 
@@ -34,10 +27,10 @@ const Home = (props) => {
                     <img src={prod.image} height="200px" width={200} alt="auto" />
                     <h3 className="title">{prod.title}</h3>
                     <p className="p">{prod.price} €</p>
-                    <h3 className="p">{prod.rating.rate} <img src="https://img.icons8.com/material-rounded/24/000000/star--v1.png" /></h3>
-            
+                    <h3 className="p">Rate {prod.rating.rate} <img src="https://img.icons8.com/material-rounded/24/000000/star--v1.png" /></h3>
+                    <div className="container-button1">
                     <Button variant="contained" className="button1" onClick={() => navigate(`/Products/product/${prod.id}`)}>Buy</Button>
-
+                    </div>
                 </div>): "")}
 
             
