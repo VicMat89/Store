@@ -12,7 +12,7 @@ import { AppUsers } from "./context/contextUsers";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import Users from "./components/Users";
-
+import Profile from "./components/Profile";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -42,6 +42,7 @@ function App() {
             />
             <Route path="/Products/product/:id" element={<OneProduct />} />
             <Route path="/Users" element={<Users />} />
+            <Route path="/Profile/:name" element={<Profile />} />
           </Routes>
         </Router>
         </AppUsers>
