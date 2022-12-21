@@ -1,13 +1,14 @@
-.nav-container{
+.nav-container {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    height: 50px;
-    border: 3px solid black;
+    height: 70px;
+    justify-content: space-around;
 }
-.logo{
-    width: 5%;
+
+.logo {
+    width: 8%;
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -15,7 +16,8 @@
     cursor: pointer;
 
 }
-.no-carr{
+
+.no-carr {
     width: 20%;
     border: 1px solid black;
     display: flex;
@@ -23,40 +25,40 @@
     align-items: center;
 }
 
-.img-nav{
+.img-nav {
     width: 80%;
 }
 
-.search{
+.search {
     width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.user{
+
+.user {
     width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button-nav{
-    color: black!important;
-    font-weight: bold!important;
-    font-size: 1.1rem!important;
+.button-nav {
+    color: black !important;
+    font-weight: bold !important;
+    font-size: 1.1rem !important;
 }
 
-.container-nav2{
+.container-nav2 {
     display: flex;
     width: 60%;
     justify-content: flex-end;
     gap: 20px;
 }
 
-.container-nav1{
+.container-nav1 {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
-    width: 40%;
-    
+    width: 80%;
+    justify-content: space-between;
 }

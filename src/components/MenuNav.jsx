@@ -18,11 +18,7 @@ export function MenuNav(props) {
     const navigate5 = useNavigate();
 
     let veriLogin = contextUser.sharedUsers.find((x) => x.isLogin === true)
-    const logout = () => {
-        const changeToFalse = contextUser.sharedUsers.map((x) => x.isLogin === true ? { ...x, isLogin: false } : x)
-        contextUser.setSharedUsers(changeToFalse)
-        veriLogin = null
-    }
+   
 
     return (<div className='nav-container'>
         <div className='container-nav1'>
@@ -30,8 +26,8 @@ export function MenuNav(props) {
             <Button variant="text" className="button-nav" onClick={() => navigate2("/products")}>Products</Button>
             <input className='search' placeholder='Search...' type='text' />
 
-        </div>
-        <div className='container-nav2'>
+        {/*</div>
+        <div className='container-nav2'>*/}
             {veriLogin ? (
                 <div className='container-logOut'>
                     <Button  variant="text" className="button-nav" onClick={() => navigate5(`/Profile/${veriLogin.name.firstname}`)}>Welcome {veriLogin.name.firstname}</Button>
@@ -39,8 +35,8 @@ export function MenuNav(props) {
                 </div>)
                 : (<Button variant="text" className="button-nav" onClick={() => navigate4("/Users")}>Log In</Button>
                 )}
-            <Button variant="contained" endIcon={<AddShoppingCartIcon />} className="button1" onClick={() => navigate3("/Carrito")}>
-                {context.shareTotal[0].totalUnits}
+            <Button variant="contained" startIcon={<AddShoppingCartIcon />} className="button1" onClick={() => navigate3("/Carrito")}>
+                ( {context.shareTotal[0].totalUnits} )
             </Button>
         </div>
     </div>
