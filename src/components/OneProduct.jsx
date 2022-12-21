@@ -15,6 +15,7 @@ const OneProduct = () => {
 
     const [product, setProduct] = useState([]);
     const [veri, setVeri] = useState(false)
+    const [send, setSend] = useState(false)
 
     useEffect(() => {
         const getProduct = async () => {
@@ -26,6 +27,7 @@ const OneProduct = () => {
 
     }, [id]);
 
+    // funcion para añadis a context TOTAL
     const addToTotal = () => {
         const setTotal = contextTotal.shareTotal.map((a) => a.totalQuantity !== null ? {
             ...a, totalQuantity: a.totalQuantity + product.price,
@@ -33,8 +35,14 @@ const OneProduct = () => {
         }
             : "")
         contextTotal.setShareTotal(setTotal)
-
     }
+    const showText = () => {
+        setSend(true)
+        setTimeout(() => {
+            setSend(false)
+        }, 2500);
+    }
+
     const sendToCart = () => {
         const verification = context.sharedState.find((x) => x.id === product.id)
         if (verification) {
@@ -52,7 +60,7 @@ const OneProduct = () => {
             })
         }
         addToTotal()
-
+        showText()
     }
 
     return (<>
@@ -68,7 +76,9 @@ const OneProduct = () => {
             </div>
             <div className="container2">
                 <p>{product.description}</p>
-                {veri ? (<h3>Rate {product.rating.rate} <img src="https://img.icons8.com/material-rounded/24/000000/star--v1.png" /></h3>) : ""}
+                {veri ? (<div className="contButton"><h3>Rate {product.rating.rate} <img src="https://img.icons8.com/material-rounded/24/000000/star--v1.png" />
+                </h3>{send && <h3>Product added to cart!</h3>}</div>) : ""}
+
                 <div className="contButton">
                     <Button className="button" variant="contained" onClick={() => sendToCart(product.id)}>Add to Cart</Button>
                     <Button className="button1" variant="contained" onClick={() => navigate("/carrito")}>Go to Cart</Button>

@@ -1,5 +1,5 @@
 * {
-  font-family: cursive !important;
+  font-family: system-ui !important;
 }
 
 .products {
@@ -126,6 +126,7 @@
 .contButton {
   display: flex;
   gap: 15px;
+  align-items: baseline;
 }
 
 .container-cart1 {

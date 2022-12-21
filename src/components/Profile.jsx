@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useAppContextUsers } from "../context/contextUsers";
 import { Button } from "@mui/material";
 import { useNavigate } from 'react-router-dom'
@@ -28,7 +27,7 @@ const Profile = () => {
                 
                 <div className="container-prof-text">
                     <h4 >Name..</h4>
-                    <p>{currentUser[0].name.firstname}, {currentUser[0].name.lastname}</p>
+                    <p>{currentUser[0].name.firstname.toUpperCase()}, {currentUser[0].name.lastname.toUpperCase()}</p>
                 </div>
                 <div className="container-prof-text">
                     <h4>Email..</h4>
@@ -40,12 +39,12 @@ const Profile = () => {
                 </div>
                 <div className="container-prof-text">
                     <h4>Address:</h4>
-                    <h4>city...</h4>
-                    <p>{currentUser[0].address.city}</p>
+                    <h4>City...</h4>
+                    <p>{currentUser[0].address.city.toUpperCase()}</p>
                 </div>
                 <div className="container-prof-text">
-                    <h4>street...</h4>
-                    <p>{currentUser[0].address.street}, nº {currentUser[0].address.number}, cp {currentUser[0].address.zipcode}</p>
+                    <h4>Street...</h4>
+                    <p>{currentUser[0].address.street.toUpperCase()}, nº {currentUser[0].address.number}, cp {currentUser[0].address.zipcode}</p>
                 </div>
                 <div className="container-prof-text">
                     <h4>PASSWORD.. *******</h4>
@@ -56,7 +55,7 @@ const Profile = () => {
                 </div>
 
             </div>
-            <Button variant="text" className="button1" onClick={() => logout()}>SING OUT</Button>
+            <Button variant="text" className="button1" onClick={() => logout()}>SIGN OUT</Button>
         </div >
 
     )

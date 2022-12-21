@@ -15,7 +15,7 @@ const Home = (props) => {
 
   
     return <>
-        <h1 className="text-top-home">WELCOME TO OUR STORE</h1>
+        <h1 className="text-top-home">THE LATETS TRENDS</h1>
         <DemoCarousel info={productos} />
         <hr />
         <h1 className="containerProducts"> TOP RATE <img src="https://img.icons8.com/ios-filled/50/null/prize.png" /></h1>
