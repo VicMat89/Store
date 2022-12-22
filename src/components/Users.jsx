@@ -20,7 +20,7 @@ const Users = () => {
             navigate("/")
         } else {
             alert("usuario y/o contraseña no encontrado")
-            console.log(contextUser.sharedUsers)
+            
         }
     }
     return (<>

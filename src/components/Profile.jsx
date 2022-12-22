@@ -13,7 +13,6 @@ const Profile = () => {
     const logout = () => {
         const changeToFalse = contextUser.sharedUsers.map((x) => x.isLogin === true ? { ...x, isLogin: false } : x)
         contextUser.setSharedUsers(changeToFalse)
-        //veriLogin = null
         navigate("/")
     }
 

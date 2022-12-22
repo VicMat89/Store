@@ -27,7 +27,7 @@ const OneProduct = () => {
 
     }, [id]);
 
-    // funcion para añadis a context TOTAL
+    
     const addToTotal = () => {
         const setTotal = contextTotal.shareTotal.map((a) => a.totalQuantity !== null ? {
             ...a, totalQuantity: a.totalQuantity + product.price,

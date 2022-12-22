@@ -31,7 +31,7 @@ function App() {
       <AppWrapperTotal>
       <AppUsers>
         <Router>
-          <MenuNav productos={products} />
+          <MenuNav />
           <Routes>
             <Route path="/" element={<Home products={products} />} />
             <Route path="/Carrito" element={<Cart products={products} />} />
