@@ -14,7 +14,7 @@
   margin: 5px;
   padding: 10px;
   border-color: #E4E9F3;
-  background-color: azure;
+  background-color: white!important;
 }
 
 .containerProducts {
@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-
+  background-color: azure;
 }
 
 .title {

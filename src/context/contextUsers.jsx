@@ -11,7 +11,6 @@ export function AppUsers({ children }) {
     useEffect(() => {
         const getUsers = async () => {
             const info = await axios.get("https://fakestoreapi.com/users")
-            //setSharedUsers(info.data)
             const info1 = info.data.map((i) => info.data[0].id === 1 ? { ...i, isLogin: false } : i)
             setSharedUsers(info1)
             console.log(sharedUsers)

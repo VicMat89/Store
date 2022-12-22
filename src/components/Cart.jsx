@@ -6,9 +6,6 @@ const Cart = () => {
 
     const context = useAppContext();
     const contextTotal = useAppContextTotal();
-
-
-
     const addItem = (id) => {
         const verification = context.sharedState.find((x) => x.id === id)
         const setItem = context.sharedState.map((x) => x.id === id ? {
@@ -17,7 +14,7 @@ const Cart = () => {
         } : x)
         context.setSharedState(setItem)
 
-        const addToTotal = () => { // funcion sumar importes en el total final//
+        const addToTotal = () => { 
             const setTotal = contextTotal.shareTotal.map((a) => a.totalQuantity !== 0 ? {
                 ...a, totalQuantity: a.totalQuantity + verification.price,
                 totalUnits: a.totalUnits + 1
